@@ -1,0 +1,110 @@
+Launching lib/main.dart on V2005A in debug mode...
+Warning: Mapping new ns http://schemas.android.com/repository/android/common/02 to old ns http://schemas.android.com/repository/android/common/01
+Warning: Mapping new ns http://schemas.android.com/repository/android/generic/02 to old ns http://schemas.android.com/repository/android/generic/01
+Warning: Mapping new ns http://schemas.android.com/sdk/android/repo/addon2/02 to old ns http://schemas.android.com/sdk/android/repo/addon2/01
+Warning: Mapping new ns http://schemas.android.com/sdk/android/repo/repository2/02 to old ns http://schemas.android.com/sdk/android/repo/repository2/01
+Warning: Mapping new ns http://schemas.android.com/sdk/android/repo/sys-img2/02 to old ns http://schemas.android.com/sdk/android/repo/sys-img2/01
+✓  Built build/app/outputs/flutter-apk/app-debug.apk.
+W/FlutterActivityAndFragmentDelegate( 6182): A splash screen was provided to Flutter, but this is deprecated. See flutter.dev/go/android-splash-migration for migration steps.
+Connecting to VM Service at ws://127.0.0.1:51140/4kh04_se8A0=/ws
+I/WebViewFactory( 6182): Loading com.google.android.webview version 83.0.4103.106 (code 410410683)
+I/cr_LibraryLoader( 6182): Loaded native library version number "83.0.4103.106"
+I/cr_CachingUmaRecorder( 6182): Flushed 3 samples from 3 histograms.
+W/selectable_dem( 6182): Accessing hidden method Llibcore/io/Memory;->peekLong(JZ)J (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Llibcore/io/Memory;->pokeLong(JJZ)V (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Llibcore/io/Memory;->pokeInt(JIZ)V (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Llibcore/io/Memory;->peekInt(JZ)I (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Llibcore/io/Memory;->pokeByte(JB)V (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Llibcore/io/Memory;->peekByte(J)B (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Llibcore/io/Memory;->pokeByteArray(J[BII)V (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Llibcore/io/Memory;->peekByteArray(J[BII)V (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J (greylist,core-platform-api, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden field Ljava/nio/Buffer;->address:J (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I (greylist,core-platform-api, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J (greylist,core-platform-api, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, reflection, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I (greylist, linking, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V (greylist, linking, allowed)
+W/selectable_dem( 6182): Accessing hidden method Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V (greylist, linking, allowed)
+W/chromium( 6182): [WARNING:dns_config_service_posix.cc(341)] Failed to read DnsConfig.
+W/selectable_dem( 6182): Accessing hidden method Landroid/media/AudioManager;->getOutputLatency(I)I (greylist, reflection, allowed)
+W/cr_media( 6182): Requires BLUETOOTH permission
+D/NetdClient( 6182): queryResolvNetidForUid nid:0, uid:10359, command.cmdId:12
+E/NetdClient( 6182): querySockNetidForUid nid:0, uid:10359, command.cmdId:11, id:0
+I/NetdClient( 6182): querySockNetidForNetCoexist command.cmdId:13, uid:10359, dstIp:180.101.49.12|3026530572, bindNetid:0
+D/NetdClient( 6182): netdClientConnect netId:0, uid:10359, nid:0, addr:180.101.49.12, lan:0, localhost:0, sa_family:2, sockfd:168, thread:NetworkService, threadsocketid:0, netcoexist:0
+W/VideoCapabilities( 6182): Unsupported mime image/vnd.android.heic
+W/VideoCapabilities( 6182): Unsupported mime video/divx
+W/VideoCapabilities( 6182): Unsupported mime video/divx4
+W/VideoCapabilities( 6182): Unrecognized profile/level 0/3 for video/mpeg2
+W/VideoCapabilities( 6182): Unrecognized profile/level 0/3 for video/mpeg2
+W/AudioCapabilities( 6182): Unsupported mime audio/adpcm
+W/AudioCapabilities( 6182): Unsupported mime audio/x-ms-adpcm
+W/AudioCapabilities( 6182): Unsupported mime audio/alac
+W/AudioCapabilities( 6182): Unsupported mime audio/ape
+W/AudioCapabilities( 6182): Unsupported mime audio/dsd
+W/AudioCapabilities( 6182): Unsupported mime audio/mpeg-L1
+W/AudioCapabilities( 6182): Unsupported mime audio/mpeg-L2
+W/AudioCapabilities( 6182): Unsupported mime audio/pcm
+W/AudioCapabilities( 6182): Unsupported mime audio/ra
+W/AudioCapabilities( 6182): Unsupported mime audio/x-ms-wma
+D/NetworkSecurityConfig( 6182): No Network Security Config specified, using platform default
+W/VideoCapabilities( 6182): Unsupported mime video/divx3
+W/VideoCapabilities( 6182): Unsupported mime video/flv1
+W/VideoCapabilities( 6182): Unsupported mime video/x-flv
+W/VideoCapabilities( 6182): Unsupported mime video/mjpeg
+W/VideoCapabilities( 6182): Unsupported mime video/x-motion-jpeg
+W/VideoCapabilities( 6182): Unsupported mime video/rv
+W/VideoCapabilities( 6182): Unsupported mime video/x-ms-wmv
+W/VideoCapabilities( 6182): Unsupported mime video/x-ms-wmv2
+D/NetdClient( 6182): queryResolvNetidForUid nid:0, uid:10359, command.cmdId:12
+E/NetdClient( 6182): querySockNetidForUid nid:0, uid:10359, command.cmdId:11, id:0
+I/NetdClient( 6182): querySockNetidForNetCoexist command.cmdId:13, uid:10359, dstIp:49.79.225.35|827318563, bindNetid:0
+D/NetdClient( 6182): netdClientConnect netId:0, uid:10359, nid:0, addr:49.79.225.35, lan:0, localhost:0, sa_family:2, sockfd:167, thread:NetworkService, threadsocketid:0, netcoexist:0
+D/NetdClient( 6182): queryResolvNetidForUid nid:0, uid:10359, command.cmdId:12
+E/NetdClient( 6182): querySockNetidForUid nid:0, uid:10359, command.cmdId:11, id:0
+I/NetdClient( 6182): querySockNetidForNetCoexist command.cmdId:13, uid:10359, dstIp:180.101.49.19|3026530579, bindNetid:0
+D/NetdClient( 6182): netdClientConnect netId:0, uid:10359, nid:0, addr:180.101.49.19, lan:0, localhost:0, sa_family:2, sockfd:178, thread:NetworkService, threadsocketid:0, netcoexist:0
+D/NetdClient( 6182): queryResolvNetidForUid nid:0, uid:10359, command.cmdId:12
+E/NetdClient( 6182): querySockNetidForUid nid:0, uid:10359, command.cmdId:11, id:0
+I/NetdClient( 6182): querySockNetidForNetCoexist command.cmdId:13, uid:10359, dstIp:180.101.212.33|3026572321, bindNetid:0
+D/NetdClient( 6182): netdClientConnect netId:0, uid:10359, nid:0, addr:180.101.212.33, lan:0, localhost:0, sa_family:2, sockfd:183, thread:NetworkService, threadsocketid:0, netcoexist:0
+E/MainApplication( 6182): onConfigurationChanged
+E/MainApplication( 6182): onConfigurationChanged
+E/MainApplication( 6182): onConfigurationChanged
+W/cr_ChildProcessConn( 6182): onServiceDisconnected (crash or killed by oom): pid=6341 bindings:W S state:3 counts:0,0,0,1,
+E/chromium( 6182): [ERROR:aw_browser_terminator.cc(125)] Renderer process (6341) crash detected (code 11).
+F/chromium( 6182): [FATAL:crashpad_client_linux.cc(561)] Render process (6341)'s crash wasn't handled by all associated  webviews, triggering application crash.
+F/libc    ( 6182): Fatal signal 5 (SIGTRAP), code -6 (SI_TKILL) in tid 6182 (selectable_demo), pid 6182 (selectable_demo)
+Softversion: PD2005_A_5.13.2
+Time: 2022-01-12 10:27:35
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/PD2005/PD2005:10/QP1A.190711.020/compiler11191656:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2022-01-12 10:27:35+0800
+pid: 6182, tid: 6182, name: selectable_demo  >>> com.example.selectable_demo <<<
+uid: 10359
+signal 5 (SIGTRAP), code -6 (SI_TKILL), fault addr --------
+Abort message: '[FATAL:crashpad_client_linux.cc(561)] Render process (6341)'s crash wasn't handled by all associated  webviews, triggering application crash.
+'
+    x0  0000000000000000  x1  0000000000000081  x2  000000007fffffff  x3  0000000000000000
+    x4  0000000000000000  x5  0000000000000000  x6  0000000000000000  x7  0000003c2b2dffff
+    x8  0000000000000000  x9  0000000000000000  x10 0000000000000001  x11 0000000000000000
+    x12 0000007e55c86120  x13 ffffffffffffffff  x14 0000000000000001  x15 ffffffffffffffff
+    x16 0000007f37028878  x17 0000007f36fb53b0  x18 0000007f3a554000  x19 0000007fda3f38b0
+    x20 0000007fda3f38b8  x21 0000007fda3f38c0  x22 000000000000008d  x23 0000007f37023508
+    x24 0000007e5b28e000  x25 0000007f397e5020  x26 0000007e576d2fe5  x27 0000007fda3f3400
+    x28 0000007e576b0462  x29 0000007fda3f3850
+    sp  0000007fda3f33f0  lr  0000007e58c35194  pc  0000007e58c35394
+backtrace:
+      #00 pc 00000000018ab394  /system/product/app/WebViewGoogle/WebViewGoogle.apk!libmonochrome.so (offset 0x1a2000) (BuildId: 0800d6a7294fbda9e42e3546b22bd3c5f2a6ee06)
+Lost connection to device.
+Exited (sigterm)
