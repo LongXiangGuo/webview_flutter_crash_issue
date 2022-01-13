@@ -14,6 +14,7 @@ the webview_flutter crashed
 
 [env](./env.txt)
 [crash_flutter_253](./crash_flutter_253.txt)
+[crash_flutter_280](./crash_flutter_280.txt)
 
 ```
 E/MainApplication( 6182): onConfigurationChanged
