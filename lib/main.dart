@@ -1,8 +1,11 @@
 import 'dart:io';
+import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:yaml/yaml.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,18 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TextSelectionTheme(
-        data: const TextSelectionThemeData(
-          selectionColor: Colors.red,
-          cursorColor: Colors.yellow,
-          selectionHandleColor: Colors.red,
-        ),
-        child: Builder(
-          builder: (ctx) {
-            return const MyHomePage(title: 'Flutter Demo Home Page');
-          },
-        ),
-      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -65,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    loadYaml('yaml');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -83,15 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
               const Text(
                 'SelectableText bugs: selectionHandleColor not work and line height not same',
               ),
-              TextSelectionTheme(
-                data: const TextSelectionThemeData(
-                    cursorColor: Colors.red, selectionColor: Colors.yellow, selectionHandleColor: Colors.green),
-                child: SelectableText(
-                  'aaYY*E¥%选择区域counter is $_counter 中文😊',
-                  focusNode: _focusNode,
-                  style: Theme.of(context).textTheme.bodyText2,
-                  selectionControls: MaterialTextSelectionControls(),
-                ),
+              SelectableText(
+                '测试(BoxHeightStyle.includeLineSpacingMiddle) 测试(BoxHeightStyle.includeLineSpacingMiddle) 测试(BoxHeightStyle.includeLineSpacingMiddle)',
+                focusNode: _focusNode,
+                style: Theme.of(context).textTheme.subtitle1!,
+                // selectionControls: MaterialTextSelectionControls(),
+                selectionHeightStyle: BoxHeightStyle.includeLineSpacingMiddle,
               ),
               const Text(
                 'WebView bugs: toggle dark off/on -> off/on -> off/on, app crashed',
@@ -109,6 +99,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text('open https://flutter.dev in WebView'),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              SelectableText(
+                '测试(BoxHeightStyle.tight)测试(BoxHeightStyle.tight)',
+                focusNode: FocusNode(),
+                cursorColor: Colors.red,
+                style: Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: 30),
               ),
               // TextButton(
               //   onPressed: () {

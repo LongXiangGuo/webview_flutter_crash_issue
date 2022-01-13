@@ -1,0 +1,46 @@
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel unknown, 2.8.0, on macOS 11.5.1 20G80 darwin-x64, locale
+    en-CN)
+[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.2)
+[✓] Xcode - develop for iOS and macOS (Xcode 13.1)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2020.3)
+[✓] IntelliJ IDEA Community Edition (version 2021.2)
+[✓] VS Code (version 1.63.2)
+[✓] Connected device (3 available)
+    ! Error: iPhoneXR is not connected. Xcode will continue when iPhoneXR is
+      connected. (code -13)
+
+E/MainApplication( 7073): onConfigurationChanged
+E/MainApplication( 7073): onConfigurationChanged
+E/MainApplication( 7073): onConfigurationChanged
+W/cr_ChildProcessConn( 7073): onServiceDisconnected (crash or killed by oom): pid=7333 bindings:W S state:3 counts:0,0,0,1,
+E/InputMethodManager( 7073): b/117267690: Failed to get fallback IMM with expected displayId=18 actual IMM#displayId=0 view=io.flutter.plugins.webviewflutter.InputAwareWebView{60303a7 VFEDHVC.. ........ 0,0-1080,2250}
+E/chromium( 7073): [ERROR:aw_browser_terminator.cc(125)] Renderer process (7333) crash detected (code 11).
+F/chromium( 7073): [FATAL:crashpad_client_linux.cc(561)] Render process (7333)'s crash wasn't handled by all associated  webviews, triggering application crash.
+F/libc    ( 7073): Fatal signal 5 (SIGTRAP), code -6 (SI_TKILL) in tid 7073 (selectable_demo), pid 7073 (selectable_demo)
+Softversion: PD2005_A_5.13.2
+Time: 2022-01-13 09:35:23
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'vivo/PD2005/PD2005:10/QP1A.190711.020/compiler11191656:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2022-01-13 09:35:23+0800
+pid: 7073, tid: 7073, name: selectable_demo  >>> com.example.selectable_demo <<<
+uid: 10361
+signal 5 (SIGTRAP), code -6 (SI_TKILL), fault addr --------
+Abort message: '[FATAL:crashpad_client_linux.cc(561)] Render process (7333)'s crash wasn't handled by all associated  webviews, triggering application crash.
+'
+    x0  0000000000000000  x1  0000000000000081  x2  000000007fffffff  x3  0000000000000000
+    x4  0000000000000000  x5  0000000000000000  x6  0000000000000000  x7  0000003c2b2dffff
+    x8  0000000000000000  x9  0000000000000000  x10 0000000000000001  x11 0000000000000000
+    x12 0000007e2f19f140  x13 ffffffffffffffff  x14 0000000000000001  x15 ffffffffffffffff
+    x16 0000007f37028878  x17 0000007f36fb53b0  x18 0000007f3a554000  x19 0000007fda3f38b0
+    x20 0000007fda3f38b8  x21 0000007fda3f38c0  x22 000000000000008d  x23 0000007f37023508
+    x24 0000007e5b28e000  x25 0000007f397e5020  x26 0000007e576d2fe5  x27 0000007fda3f3400
+    x28 0000007e576b0462  x29 0000007fda3f3850
+    sp  0000007fda3f33f0  lr  0000007e58c35194  pc  0000007e58c35394
+backtrace:
+      #00 pc 00000000018ab394  /system/product/app/WebViewGoogle/WebViewGoogle.apk!libmonochrome.so (offset 0x1a2000) (BuildId: 0800d6a7294fbda9e42e3546b22bd3c5f2a6ee06)
+Lost connection to device.
+Exited (sigterm)
