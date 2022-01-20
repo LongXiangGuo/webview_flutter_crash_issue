@@ -1,11 +1,10 @@
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:flutter/rendering.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'package:yaml/yaml.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,107 +35,102 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-  late FocusNode _focusNode;
-
   @override
   void initState() {
     super.initState();
-    _focusNode = FocusNode();
-    //    if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView(); also crash
-  }
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-    if (_focusNode.hasFocus) {
-      _focusNode.unfocus();
-    }
   }
 
   @override
   Widget build(BuildContext context) {
-    loadYaml('yaml');
+    print('_MyHomePageState build');
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: GestureDetector(
-        behavior: HitTestBehavior.translucent,
-        onTap: () {
-          if (_focusNode.hasFocus) {
-            _focusNode.unfocus();
-          }
-        },
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Text(
-                'SelectableText bugs: selectionHandleColor not work and line height not same',
-              ),
-              SelectableText(
-                '测试(BoxHeightStyle.includeLineSpacingMiddle) 测试(BoxHeightStyle.includeLineSpacingMiddle) 测试(BoxHeightStyle.includeLineSpacingMiddle)',
-                focusNode: _focusNode,
-                style: Theme.of(context).textTheme.subtitle1!,
-                // selectionControls: MaterialTextSelectionControls(),
-                selectionHeightStyle: BoxHeightStyle.includeLineSpacingMiddle,
-              ),
-              const Text(
-                'WebView bugs: toggle dark off/on -> off/on -> off/on, app crashed',
-              ),
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const WebView(
-                          initialUrl: 'https://flutter.dev',
-                        );
-                      },
-                    ),
-                  );
-                },
-                child: const Text('open https://flutter.dev in WebView'),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              SelectableText(
-                '测试(BoxHeightStyle.tight)测试(BoxHeightStyle.tight)',
-                focusNode: FocusNode(),
-                cursorColor: Colors.red,
-                style: Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: 30),
-              ),
-              // TextButton(
-              //   onPressed: () {
-              //     Navigator.of(context).push(
-              //       MaterialPageRoute(
-              //         builder: (context) {
-              //           return InAppWebView(
-              //             initialUrlRequest: URLRequest(
-              //               url: Uri.tryParse('https://flutter.dev'),
-              //             ),
-              //           );
-              //           // return const WebView(
-              //           //   initialUrl: 'https://flutter.dev',
-              //           // );
-              //         },
-              //       ),
-              //     );
-              //   },
-              //   child: const Text('open https://flutter.dev in InAppWebView'),
-              // )
-            ],
-          ),
+      appBar: CustomNaviBar(
+        appBar: AppBar(
+          title: Text(widget.title),
+          backgroundColor: Colors.white,
+          actions: [
+            TextButton(
+              onPressed: () {
+                showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return Column(
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.all(16.0),
+                          child: Text('share'),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Wrap(
+                            children: [
+                              TextButton(
+                                onPressed: () {
+                                  launch('https://flutter.dev');
+                                },
+                                child: const Text('safari'),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+              child: const Text('share'),
+            )
+          ],
+          bottom: const NaviBarDivider(),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body: Container(
+        key: const Key('key'),
+        child: Column(
+          children: [
+            Container(
+              height: 20,
+              child: Text('padding 20'),
+            ),
+            const SizedBox(
+              height: 300,
+              child: WebView(
+                initialUrl: 'https://flutter.dev',
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
+}
+
+class CustomNaviBar extends StatelessWidget with PreferredSizeWidget {
+  final PreferredSizeWidget appBar;
+  const CustomNaviBar({Key? key, required this.appBar}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return appBar;
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 1.0);
+}
+
+class NaviBarDivider extends StatelessWidget with PreferredSizeWidget {
+  const NaviBarDivider({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Divider(
+      height: 1.0,
+      color: Colors.black,
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 1.0);
 }
